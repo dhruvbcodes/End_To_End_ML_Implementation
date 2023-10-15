@@ -15,7 +15,7 @@ logging.basicConfig(
 )
 
 '''
-to check if logger works lmao
+#to check if logger works lmao
 if __name__ == "__main__":
     logging.info("Logging has started")
 '''

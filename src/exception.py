@@ -1,5 +1,5 @@
 import sys 
-import logging
+from logger import logging
 
 
 def error(msg,msg_detail:sys):
@@ -18,8 +18,9 @@ class CustomException(Exception):
         return self.Error_Message
     
 
+
 '''
-just to check working of the exception 
+#just to check working of the exception 
 if __name__ == "__main__":
     try:
         X = 1/0
@@ -27,3 +28,4 @@ if __name__ == "__main__":
         logging.info(e)
         raise CustomException(e,sys)
 '''
+
