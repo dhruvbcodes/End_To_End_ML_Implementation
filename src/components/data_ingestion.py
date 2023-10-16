@@ -11,6 +11,9 @@ from dataclasses import dataclass
 from data_transformation import DataTransformation
 from data_transformation import DataTransformationConfig
 
+from model_trainer import ModelTrainer
+from model_trainer import ModelTrainerConfig
+
 @dataclass # we use dataclass since we want to use this class as a data container
 class DataIngestionConfig:
     train_data_path: str = os.path.join('artefacts','train.csv') # path to the training data
@@ -55,5 +58,8 @@ if __name__ == "__main__":
     train_data,test_data = data_ingestion.load_data()
 
     data_transformation = DataTransformation()
-    data_transformation.get_transformer(train_data,test_data)
+    train_array,test_array,_ = data_transformation.get_transformer(train_data,test_data)
+
+    model_trainer = ModelTrainer()
+    model_trainer.initiate_training(train_array,test_array)
 
