@@ -5,5 +5,6 @@ seaborn
 scikit-learn 
 catboost 
 xgboost  
+dill
 
  # install the package in editable mode (i.e. pip install -e .)  || automatically install all the dependencies

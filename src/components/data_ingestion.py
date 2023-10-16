@@ -8,6 +8,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
+from data_transformation import DataTransformation
+from data_transformation import DataTransformationConfig
+
 @dataclass # we use dataclass since we want to use this class as a data container
 class DataIngestionConfig:
     train_data_path: str = os.path.join('artefacts','train.csv') # path to the training data
@@ -44,8 +47,13 @@ class DataIngestion:
             )
 
         except Exception as e:
+            logging.info(e)
             raise CustomException(e, sys)
         
 if __name__ == "__main__":
     data_ingestion = DataIngestion()
-    data_ingestion.load_data()
+    train_data,test_data = data_ingestion.load_data()
+
+    data_transformation = DataTransformation()
+    data_transformation.get_transformer(train_data,test_data)
+
