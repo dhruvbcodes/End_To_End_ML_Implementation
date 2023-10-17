@@ -1,0 +1,75 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set background color and text color */
+  body {
+    background-color: #232323;
+    color: #dbd0d0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #025b92; /* Slightly darker blue */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  /* Style the container */
+  .container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style labels and form elements */
+  label {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  select,
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #006db3; /* Slightly darker blue */
+    border-radius: 5px;
+    background-color: #232323;
+    color: #fff;
+  }
+  
+  /* Style submit button */
+  input[type="submit"] {
+    background-color: #006db3; /* Slightly darker blue */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style prediction result */
+  h2 {
+    margin-top: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #006db3; /* Slightly darker blue */
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  /* Add more styles as needed */
+  
